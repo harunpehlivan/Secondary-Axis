@@ -90,14 +90,12 @@ plt.xticks(rotation=70)
 
 def date2yday(x):
     """Convert matplotlib datenum to days since 2018-01-01."""
-    y = x - mdates.date2num(datetime.datetime(2018, 1, 1))
-    return y
+    return x - mdates.date2num(datetime.datetime(2018, 1, 1))
 
 
 def yday2date(x):
     """Return a matplotlib datenum for *x* days after 2018-01-01."""
-    y = x + mdates.date2num(datetime.datetime(2018, 1, 1))
-    return y
+    return x + mdates.date2num(datetime.datetime(2018, 1, 1))
 
 
 secax_x = ax.secondary_xaxis('top', functions=(date2yday, yday2date))
